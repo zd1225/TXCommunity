@@ -1,0 +1,10 @@
+# 1. 设置代理（假设你的代理软件本地端口是 7890，常见于 Clash 等）
+git config --global http.proxy http://127.0.0.1:7890
+git config --global https.proxy http://127.0.0.1:7890
+
+# 2. 验证是否设置成功
+git config --global --get http.proxy
+
+# 3. 如果以后不想用代理了，删除配置
+git config --global --unset http.proxy
+git config --global --unset https.proxy
