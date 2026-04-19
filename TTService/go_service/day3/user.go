@@ -64,7 +64,9 @@ func main() {
 
 func createChan(){
 	//无缓冲的channel，同步阻塞，需要发送端和接收端同时准备好
+	//无缓冲，同步通信
 	ch1 := make(chan int)
+	//有缓冲，容量为5，异步通信
 	// ch2 := make(chan string, 5)
 	
 	// 发送方 放进 子 goroutine,否则会卡死，互相等待
